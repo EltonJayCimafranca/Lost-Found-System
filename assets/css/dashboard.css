@@ -1,0 +1,59 @@
+#container {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg, #F5F5F5, #fffdf5);
+    margin: 0;
+    padding: 60px;
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    height: 100vh;
+
+}
+form h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+label {
+    font-weight: 400;
+}
+form {
+    border: none;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.2);
+    border-radius: 15px;
+
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 75px;
+}
+input, textarea, select {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+}
+input[type="date"] {
+    color: #777;
+}
+input[type="file"] {
+    color: #777;
+}
+option.blank {
+    color: #777;
+}
+.btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+    background-color: #800000;
+
+    color: white;   
+}
+span {
+    color: red;
+}
