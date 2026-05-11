@@ -1,116 +1,62 @@
-.container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+html {
+    background: linear-gradient(90deg, #F5F5F5, #fffdf5);
 }
-
-.container h2 {
-    font-weight: 600;
+#container {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg, #F5F5F5, #fffdf5);
+    margin: 0;
+    padding: 60px;
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    height: 100vh;
+
+}
+form h2 {
+    font-weight: 600;
     margin-bottom: 20px;
 }
-/* Table design */
-.item-table {
+label {
+    font-weight: 400;
+}
+form {
+    border: none;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.2);
+    border-radius: 15px;
+
+    padding: 30px;
     width: 100%;
-    border-collapse: collapse;
-    background: #fff;
+    max-width: 400px;
+    margin-bottom: 75px;
+}
+input, textarea, select {
+    width: 100%;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(0, 0, 0, 0.05);
+    margin-bottom: 15px;
 }
-
-.item-table thead {
-    background: #4b4b4b;
-    color: #fff;
+input[type="date"] {
+    color: #777;
 }
-
-.item-table th,
-.item-table td {
-    padding: 12px;
-    text-align: left;
+input[type="file"] {
+    color: #777;
 }
-
-
-.item-table tbody tr {
-    border-bottom: 1px solid #eee;
-    transition: 0.2s;
+option.blank {
+    color: #777;
 }
-
-.item-table tbody tr:hover {
-    background: #f5f5f5;
-}
-
-/* Image */
-.img-preview {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Status badges */
-.status {
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    color: #fff;
-}
-
-.status.lost {
-    background: #e74c3c;
-}
-
-.status.found {
-    background: #27ae60;
-}
-
-.status.claimed {
-    background: #3498db;
-}
-.btn-update, .btn-delete {
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    margin-right: 5px;
-}
-.actions {
-    margin-right: 25px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 8px;
-}
-.btn-update {
-    text-align: center;
-    width: 90%;
-    background: #f1c40f;
-    color: #000;
-}
-
-.btn-delete {
-    text-align: center;
-    background: #800000;
-    color: #fff;
-    width: 90%;
-}
-
-.btn-update:hover,
-.btn-delete:hover {
-    opacity: 0.8;
-}
-
 .btn {
+    margin-top: 20px;
     width: 100%;
     padding: 10px;
-    margin-top: 20px;
 
     border: none;
     border-radius: 10px;
     background-color: #800000;
 
+    color: white;   
 }
-
-a {
-    text-decoration: none;
-    color: white;
+span {
+    color: red;
 }

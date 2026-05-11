@@ -45,7 +45,7 @@ if(isset($_POST['btnSubmit'])) {
 
     mysqli_query($connection, $sql);
 
-    header("location: ../pages/dashboard.php");
+    header("location: ../pages/viewrecords.php");
     exit();
 }
 ?>

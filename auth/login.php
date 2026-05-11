@@ -79,7 +79,7 @@ session_start();
             </div>
         </section>
     </div>
-
+    
     
     <form id="loginForm" method="post">
         <h2 class="title">Log in</h2>

@@ -3,66 +3,74 @@ body {
     margin: 0;
 }
 
+/* HEADER */
 header {
     background-color: #C4A032;
     color: white;
-    padding: 10px;
-}
-h2 {
-    margin: 0;
-    font-weight: 400;
-}
-h3 {
-    margin: 0;
-    font-size: 15px;
-    font-weight: 200;
+    padding: 10px 0;
 }
 
-.logo {
-    display: flex;
-    flex-direction: column;
-}
+/* NAV CONTAINER */
 .navBox {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    margin-left: 20px;
+
+    padding: 10px 30px;
 }
-nav {
-    border: 1px solid transparent;
+
+/* LOGO */
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.logo h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* NAVIGATION */
+header nav {
     display: flex;
     align-items: center;
-
-    margin-right: 10px;
-    margin-top: 20px;
     gap: 15px;
-    padding: 5px;
 }
-nav a {
-    border: 1px solid transparent;
-    padding: 5px 10px 5px 10px;
+
+/* NAV LINKS */
+header nav a {
     color: white;
     text-decoration: none;
- }
 
-nav a:hover {
-    border: 1px solid white;
+    padding: 8px 14px;
     border-radius: 10px;
-    padding: 5px 10px 5px 10px;
+
+    border: 1px solid transparent;
+    transition: 0.2s ease;
 }
 
-.container {
-    padding: 20px;
+header nav a:hover {
+    border: 1px solid white;
 }
+
+
+
+/* FOOTER */
 footer {
     background-color: #C4A032;
     color: white;
+
     text-align: center;
     padding: 10px;
 
     position: fixed;
     bottom: 0;
     width: 100%;
-    
 }

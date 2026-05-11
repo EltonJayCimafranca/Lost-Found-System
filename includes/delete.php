@@ -9,7 +9,7 @@
         $sql = "DELETE FROM items WHERE id = '$id'";
 
         if(mysqli_query($connection, $sql)) {
-            header("location: ../pages/index.php");
+            header("location: ../pages/viewrecords.php");
             exit();
         }
         else {

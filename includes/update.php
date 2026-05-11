@@ -43,6 +43,8 @@ if(isset($_POST['btnUpdate'])) {
     }
 
     mysqli_query($connection, $updateQuery);
+    header("Location: ../pages/viewrecords.php");
+    exit();
 }
 ?>
 
