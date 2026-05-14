@@ -1,0 +1,45 @@
+body {
+    background-color: #f6f7fb;
+}
+.status-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.status-table thead {
+    background-color: maroon;
+    color: white;
+}
+
+.status-table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* Body cells */
+.status-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Row hover effect */
+.status-table tbody tr:hover {
+    background-color: #f8f8f8;
+    transition: 0.2s ease;
+}
+
+/* Alternate row color */
+.status-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}

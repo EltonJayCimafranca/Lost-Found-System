@@ -1,3 +1,6 @@
+body {
+    background-color: #f6f7fb;
+}
 .container {
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -110,7 +113,7 @@
 
     border: none;
     border-radius: 10px;
-    background-color: #800000;
+    background: linear-gradient(135deg, #800000, #4a0303);
 
 }
 

@@ -11,11 +11,19 @@
             <div class="name_container">
 
                 <h3 id="username">
-                    <?php echo $_SESSION['fullname']; ?>
+                    <?php 
+                        echo isset($_SESSION['fullname']) 
+                        ? $_SESSION['fullname'] 
+                        : 'Guest';
+                    ?>
                 </h3>
 
                 <p id="user_type">
-                    <?php echo $_SESSION['user_type']; ?>
+                    <?php 
+                        echo isset($_SESSION['user_type']) 
+                        ? $_SESSION['user_type'] 
+                        : 'User';
+                    ?>
                 </p>
 
             </div>

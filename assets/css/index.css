@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(90deg, #F5F5F5, #fffdf5);
+    background-color: #f6f7fb;
 }
 #container {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,10 +53,10 @@ option.blank {
 
     border: none;
     border-radius: 10px;
-    background-color: #800000;
+    background: linear-gradient(135deg, #800000, #4a0303);
 
     color: white;   
 }
-span {
+.require {
     color: red;
 }

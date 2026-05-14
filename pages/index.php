@@ -4,8 +4,8 @@
     //include 'readrecords.php';   
 ?>
 
-<link rel="stylesheet" href="../assets/css/dashboard.css?v=3">
-<link rel="stylesheet" href="../assets/css/index.css?v=5">
+<link rel="stylesheet" href="../assets/css/sidebar.css?v=7">
+<link rel="stylesheet" href="../assets/css/index.css?v=8">
 
 
 <div class="layout">
@@ -23,13 +23,13 @@
                 <form action="../includes/create.php" method="POST" enctype="multipart/form-data">
                     <h2>Report Item</h2>
 
-                    <label>Item Name <span>*</span></label><br>
+                    <label>Item Name <span class="require">*</span></label><br>
                     <input type="text" name="item_name" placeholder="Item Name" required><br>
 
                     <label>Description <span>*</span></label><br>
                     <textarea name="description" placeholder="Description" required></textarea><br>
                     
-                    <label>Category <span>*</span></label><br>
+                    <label>Category <span class="require">*</span></label><br>
                     <select name="category" required>
                         <option class="blank" value="" disabled selected>---</option>
                         <option value="Electronics">Electronics</option>
@@ -39,13 +39,13 @@
                         <option value="Others">Others</option>
                     </select><br>
                     
-                    <label>Location <span>*</span></label><br>
+                    <label>Location <span class="require">*</span></label><br>
                     <input type="text" name="location" placeholder="Enter location" required><br>
 
-                    <label>Date<span>*</span></label><br>
+                    <label>Date <span class="require">*</span></label><br>
                     <input type="date" name="date_reported" required><br>
 
-                    <label>Status <span>*</span></label><br>
+                    <label>Status <span class="require">*</span></label><br>
                     <select name="status" required>
                         <option class="blank" value="" disabled selected>---</option>
                         <option value="lost">Lost</option>

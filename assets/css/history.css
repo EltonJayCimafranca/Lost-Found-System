@@ -1,0 +1,82 @@
+
+body {
+    background-color: #f6f7fb;
+}
+/* =========================
+   HISTORY GRID
+========================= */
+.history-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* =========================
+   HISTORY CARD (MODERN)
+========================= */
+.history-card {
+    background: #fff;
+    padding: 18px;
+
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.06);
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+
+    transition: 0.2s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   TITLE
+========================= */
+.history-card h3 {
+    margin: 0 0 10px 0;
+    color: #800000;
+    font-size: 16px;
+}
+
+/* =========================
+   TEXT
+========================= */
+.history-card p {
+    margin: 6px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* =========================
+   STATUS BADGES (UNIFIED STYLE)
+========================= */
+.status {
+    font-size: 12px;
+    font-weight: 600;
+
+    padding: 5px 10px;
+    border-radius: 20px;
+
+    display: inline-block;
+}
+
+/* Pending */
+.status.pending {
+    background: #fff4d6;
+    color: #8a6d1f;
+}
+
+/* Approved */
+.status.approved {
+    background: #e6f4ea;
+    color: #1e6b2f;
+}
+
+/* Rejected */
+.status.rejected {
+    background: #fde8e8;
+    color: #8b1e1e;
+}

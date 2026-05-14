@@ -1,11 +1,24 @@
 <?php    
-include '../includes/connect.php';
+    session_start();
+    include '../includes/connect.php';
 
-$resultset = mysqli_query($connection, "SELECT * FROM items");
+    $view = $_GET['view'] ?? 'all';
+
+    if ($view == 'my') {
+        $user_id = $_SESSION['user_id'];
+
+        $resultset = mysqli_query(
+            $connection,
+            "SELECT * FROM items WHERE user_id = '$user_id'"
+        );
+    } else {
+        $resultset = mysqli_query($connection, "SELECT * FROM items");
+    }
 ?>
 
-<link rel="stylesheet" href="../assets/css/dashboard.css?v=3">
-<link rel="stylesheet" href="../assets/css/viewrecords.css?v=5">
+
+<link rel="stylesheet" href="../assets/css/sidebar.css?v=7">
+<link rel="stylesheet" href="../assets/css/viewrecords.css?v=6">
 
 <div class="layout">
     <!-- SIDEBAR -->

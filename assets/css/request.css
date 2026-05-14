@@ -1,0 +1,210 @@
+/* =========================
+   DESIGN SYSTEM
+========================= */
+:root {
+    --primary: #800000;
+    --primary-dark: #5a0000;
+
+    --success: #2e7d32;
+    --success-dark: #1b5e20;
+
+    --danger: #c62828;
+    --danger-dark: #8b1e1e;
+
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --border: rgba(0,0,0,0.06);
+
+    --text: #333;
+    --muted: #666;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+    background: var(--bg);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.main-content h2 {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+/* =========================
+   FORM CARD
+========================= */
+.claim-form-card {
+    background: var(--card);
+    padding: 24px;
+    border-radius: 16px;
+
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 👈 controls spacing properly */
+}
+.claim-form-card > *:last-child {
+    margin-bottom: 0;
+}
+.claim-form-card label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text);
+}
+
+.claim-form-card textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+
+    border-radius: 10px;
+    border: 1px solid #ddd;
+
+    resize: none;
+    outline: none;
+
+    font-family: inherit;
+
+    transition: 0.2s ease;
+}
+
+.claim-form-card textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(128,0,0,0.1);
+}
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+.btn-primary {
+    margin-top: 25px;
+    background: var(--primary);
+    color: white;
+
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+/* =========================
+   CLAIM CARD
+========================= */
+.claim-card {
+    background: var(--card);
+    padding: 18px;
+
+    border-radius: 14px;
+    border: 1px solid var(--border);
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+
+    margin-bottom: 14px;
+
+    transition: 0.2s ease;
+}
+
+.claim-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.claim-card h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.claim-card p {
+    margin: 4px 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+.status {
+    font-size: 12px;
+    font-weight: 600;
+
+    padding: 5px 10px;
+    border-radius: 20px;
+
+    display: inline-block;
+}
+
+.status.pending {
+    background: #fff4d6;
+    color: #8a6d1f;
+}
+
+.status.approved {
+    background: #e6f4ea;
+    color: #1e6b2f;
+}
+
+.status.rejected {
+    background: #fde8e8;
+    color: #8b1e1e;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+.action-buttons {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-approve,
+.btn-reject {
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-size: 14px;
+
+    color: white;
+
+    transition: 0.2s ease;
+}
+
+/* Approve */
+.btn-approve {
+    background: var(--success);
+}
+
+.btn-approve:hover {
+    background: var(--success-dark);
+}
+
+/* Reject */
+.btn-reject {
+    background: var(--danger);
+}
+
+.btn-reject:hover {
+    background: var(--danger-dark);
+}
