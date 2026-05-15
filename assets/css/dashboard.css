@@ -1,5 +1,6 @@
 /* CONTENT */
 body {
+    font-family: 'Inter', sans-serif;
     background-color: #f6f7fb;
 }
 .main-content {
@@ -13,6 +14,7 @@ body {
     justify-content: space-between;
 
     padding: 10px;
+    margin-left: 0;
     border-radius: 12px;
 }
 .search_icon {
@@ -81,7 +83,10 @@ body {
     flex-wrap: wrap;
 }
 .main-content h2 {
-    color: #800000;
+    display: inline-block;
+    background: linear-gradient(135deg, #800000, #3b0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }   
 .item-card {
     flex: 0 0 250px; 

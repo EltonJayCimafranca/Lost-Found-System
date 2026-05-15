@@ -5,7 +5,7 @@ body {
 
 /* HEADER */
 header {
-    background-color: #C4A032;
+    background: linear-gradient(135deg, #E6C85A, #C4A032, #a38331);
     color: white;
     padding: 10px 0;
 }
@@ -64,7 +64,7 @@ header nav a:hover {
 
 /* FOOTER */
 footer {
-    background-color: #C4A032;
+    background: linear-gradient(135deg, #E6C85A, #C4A032, #a38331);
     color: white;
 
     text-align: center;

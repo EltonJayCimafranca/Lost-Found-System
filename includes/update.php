@@ -31,7 +31,8 @@ if(isset($_POST['btnUpdate'])) {
             status='$status',
             image='$image'
             WHERE id='$id'";
-    } else {
+    } 
+    else {
         $updateQuery = "UPDATE items SET
             item_name='$item_name',
             description='$description',

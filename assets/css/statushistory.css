@@ -1,45 +1,49 @@
-body {
-    background-color: #f6f7fb;
-}
-.status-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    font-family: Arial, sans-serif;
+/* =========================
+   PAGE TITLE / LAYOUT
+========================= */
+.main-content h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #800000;
+    font-weight: 700;
 }
 
-/* Header */
-.status-table thead {
-    background-color: maroon;
-    color: white;
+.filter_container {
+    padding: 15px 0 0 15px;
 }
 
-.status-table th {
-    padding: 12px 15px;
-    text-align: left;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+/* =========================
+   TABLE WRAPPER (Uniform with UserProfile)
+========================= */
+.table-wrapper {
+    padding: 10 px;
 }
 
-/* Body cells */
-.status-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #eee;
-    font-size: 14px;
-    color: #333;
+/* =========================
+   STATUS BADGES
+   (Maintained here for specific history overrides, 
+    but colors are pulled from table.css)
+========================= */
+.status {
+    display: inline-block;
+    min-width: 90px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
 }
 
-/* Row hover effect */
-.status-table tbody tr:hover {
-    background-color: #f8f8f8;
-    transition: 0.2s ease;
+/* Ensure Row Alignment */
+.data-table td {
+    vertical-align: middle;
 }
 
-/* Alternate row color */
-.status-table tbody tr:nth-child(even) {
-    background-color: #fafafa;
+/* Specific formatting for the History ID or Type if needed */
+.data-table td:nth-child(3), 
+.data-table td:nth-child(4) {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #555;
 }

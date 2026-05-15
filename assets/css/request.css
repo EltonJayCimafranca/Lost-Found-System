@@ -1,210 +1,157 @@
 /* =========================
-   DESIGN SYSTEM
+   PAGE LAYOUT (Basis: UserProfile)
 ========================= */
-:root {
-    --primary: #800000;
-    --primary-dark: #5a0000;
-
-    --success: #2e7d32;
-    --success-dark: #1b5e20;
-
-    --danger: #c62828;
-    --danger-dark: #8b1e1e;
-
-    --bg: #f6f7fb;
-    --card: #ffffff;
-    --border: rgba(0,0,0,0.06);
-
-    --text: #333;
-    --muted: #666;
-}
-
-/* =========================
-   GLOBAL
-========================= */
-body {
-    background: var(--bg);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 .main-content {
-    padding: 20px;
+    padding: 25px 40px;
+    background: #f6f7fb;
 }
 
 .main-content h2 {
-    margin-top: 10px;
-    margin-bottom: 8px;
-    color: var(--text);
+    font-size: 22px;
+    color: #800000;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.filter_container {
+    padding: 15px 0 0 15px;
 }
 
 /* =========================
-   FORM CARD
+   CONTAINERS
 ========================= */
-.claim-form-card {
-    background: var(--card);
-    padding: 24px;
-    border-radius: 16px;
+.history-grid-wrapper, .content-wrapper {
+    padding: 20px 15px;
+}
 
-    border: 1px solid var(--border);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+.history-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
 
-    margin-bottom: 25px;
+/* =========================
+   CARD DESIGN (History Basis)
+========================= */
+.history-card, .claim-form-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
 
+.history-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(128, 0, 0, 0.1);
+}
+
+.card-header {
+    background: #fafafa;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
     display: flex;
-    flex-direction: column;
-    gap: 10px; /* 👈 controls spacing properly */
-}
-.claim-form-card > *:last-child {
-    margin-bottom: 0;
-}
-.claim-form-card label {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 6px;
-    color: var(--text);
+    justify-content: space-between;
+    align-items: center;
 }
 
-.claim-form-card textarea {
+.card-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.description-row {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    font-size: 12px;
+    color: #888;
+    font-weight: 500;
+}
+
+.value {
+    font-size: 13px;
+    color: #444;
+    font-weight: 600;
+}
+
+.desc-text {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    line-height: 1.4;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+textarea {
     width: 100%;
     height: 120px;
     padding: 12px;
-
-    border-radius: 10px;
     border: 1px solid #ddd;
-
-    resize: none;
-    outline: none;
-
-    font-family: inherit;
-
-    transition: 0.2s ease;
-}
-
-.claim-form-card textarea:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(128,0,0,0.1);
-}
-
-/* =========================
-   PRIMARY BUTTON
-========================= */
-.btn-primary {
-    margin-top: 25px;
-    background: var(--primary);
-    color: white;
-
-    padding: 10px 16px;
     border-radius: 10px;
+    font-family: inherit;
+    margin-top: 8px;
+    resize: none;
+}
+
+.btn-primary-gradient {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(135deg, #800000, #3b0000);
+    color: white;
     border: none;
-
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.btn-primary:hover {
-    background: var(--primary-dark);
-}
-
-/* =========================
-   CLAIM CARD
-========================= */
-.claim-card {
-    background: var(--card);
-    padding: 18px;
-
-    border-radius: 14px;
-    border: 1px solid var(--border);
-
-    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-
-    margin-bottom: 14px;
-
-    transition: 0.2s ease;
-}
-
-.claim-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.claim-card h3 {
-    margin: 0;
-    color: var(--primary);
-    font-size: 16px;
-}
-
-.claim-card p {
-    margin: 4px 0;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* =========================
-   STATUS BADGES
-========================= */
-.status {
-    font-size: 12px;
+    border-radius: 10px;
     font-weight: 600;
-
-    padding: 5px 10px;
-    border-radius: 20px;
-
-    display: inline-block;
-}
-
-.status.pending {
-    background: #fff4d6;
-    color: #8a6d1f;
-}
-
-.status.approved {
-    background: #e6f4ea;
-    color: #1e6b2f;
-}
-
-.status.rejected {
-    background: #fde8e8;
-    color: #8b1e1e;
+    cursor: pointer;
 }
 
 /* =========================
    ACTION BUTTONS
 ========================= */
 .action-buttons {
-    margin-top: 12px;
-    display: flex;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
 
-.btn-approve,
-.btn-reject {
-    padding: 8px 12px;
+.btn-action {
+    padding: 10px;
+    text-align: center;
     border-radius: 8px;
-
     text-decoration: none;
-    font-size: 14px;
-
+    font-size: 13px;
+    font-weight: 600;
     color: white;
-
-    transition: 0.2s ease;
+    transition: 0.2s;
 }
 
-/* Approve */
-.btn-approve {
-    background: var(--success);
-}
+.btn-approve { background: #2e7d32; }
+.btn-approve:hover { background: #1b5e20; }
 
-.btn-approve:hover {
-    background: var(--success-dark);
-}
-
-/* Reject */
-.btn-reject {
-    background: var(--danger);
-}
-
-.btn-reject:hover {
-    background: var(--danger-dark);
-}
+.btn-reject { background: #c62828; }
+.btn-reject:hover { background: #8b1e1e; }

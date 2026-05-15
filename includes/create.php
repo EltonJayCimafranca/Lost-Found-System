@@ -3,6 +3,7 @@ include '../includes/connect.php';
 
 session_start();
 
+// AFTER SUBMIT
 if(isset($_POST['btnSubmit'])) {
 
     $user_id = $_SESSION['user_id'];
@@ -13,8 +14,7 @@ if(isset($_POST['btnSubmit'])) {
     $location = $_POST['location'];
     $date_reported = $_POST['date_reported'];
     $status = $_POST['status'];
-
-    // image upload 
+ 
     $image = $_FILES['image']['name'];
     $tmp = $_FILES['image']['tmp_name'];
 
@@ -22,6 +22,7 @@ if(isset($_POST['btnSubmit'])) {
         move_uploaded_file($tmp, "../uploads/" . $image);
     }
 
+    // INSERT ALL DATA IN THE ITEMS TABLE
     $sql = "INSERT INTO items(
                 user_id,
                 item_name,
@@ -45,6 +46,7 @@ if(isset($_POST['btnSubmit'])) {
 
     mysqli_query($connection, $sql);
 
+    //REDIRECT
     header("location: ../pages/viewrecords.php");
     exit();
 }
